@@ -166,7 +166,7 @@ class event(object):
                 weekday = int(j)
 
         days_ahead = weekday - d.weekday()
-        if days_ahead < 0: # Target day already happened this week
+        if days_ahead < 0:
             days_ahead += 7
         a = d.date() + timedelta(days_ahead)
         return datetime.combine(a, datetime.min.time()) 
